@@ -1,0 +1,14 @@
+#+TITLE: Configure cl-sqlite
+
+This the example of how I use the package SQLITE where the external libaries are located in a msys2 distribution.
+My msys2 distribution is located at c:/devel/msys64.
+I am using the ucrt64 environment.
+
+The sqlite binary is located at "c:/devel/msys64/ucrt64/bin/libsqlite3-0.dll".
+I make this call (define-sqlite-lib "c:/devel/msys64/ucrt64/bin/libsqlite3-0.dll") next I load SQLITE.
+The macro DEFINE-SQLITE-LIB is defined in SQLITE/CONFIG.
+
+* Example
+I have modifed CL-SQLITE to accept configuration of the external libraries by user's control.
+This mechanism was adapted from that used in CL+SSL.
+
